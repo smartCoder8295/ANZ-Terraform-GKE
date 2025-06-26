@@ -16,7 +16,7 @@ terraform {
 provider "google" {
   project = var.project_id
   region  = var.region
-  zone        = "asia-south1-a"
+  zone    = "asia-south1-a"
 }
 
 module "gke" {
