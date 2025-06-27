@@ -46,6 +46,15 @@ jobs:
       - name: Terraform Plan
         run: terraform plan -input=false
 
+      # ✅ Security & Compliance Check
+      - name: Run Terrascan for Security & Compliance
+        uses: accurics/terrascan-action@v1.3.0
+        with:
+          iac_type: "terraform"
+          iac_version: "v14"
+          policy_type: "gcp"
+          iac_dir: "gke-cluster"
+
       # ⚠️ Optional Auto Apply (on master only)
       - name: Terraform Apply
         if: github.ref == 'refs/heads/master'
