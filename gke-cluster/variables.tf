@@ -4,17 +4,17 @@ variable "project_id" {
 
 variable "region" {
   type    = string
-  default = "us-central1"
+  default = "asia-south1"
 }
 
 variable "location" {
   type    = string
-  default = "us-central1-a"
+  default = "asia-south1-a"
 }
 
 variable "cluster_name" {
   type    = string
-  default = "my-gke-cluster"
+  default = "sanjay-gke-cluster"
 }
 
 variable "initial_node_count" {
